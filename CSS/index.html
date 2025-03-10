@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Styling Example</title>
+    <title>CSS Styling Example</title>
     
-    <!-- Internal CSS -->
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: lightblue;
-            text-align: center;
-            padding-top: 10%;
-        }
-        .para {
-            color: darkblue;
-            font-size: 50px;
-            font-weight: bold;
-        }
-    </style>
-
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Inline Style -->
-    <h1 style="color: darkred;font-size: 75px;">This is an Inline Styled Heading</h1>
 
     <!-- Internal CSS -->
-    <p class="para">This paragraph is styled using internal CSS.</p>
+    <style>
+        .internal-card {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            border-radius:28px;
+            margin-top: 87px; 
+           
+        }
+    </style>
+</head>
+<body style="background-color: lightpink;">
 
-    <!-- External CSS -->
-    <p class="p">This paragraph is styled using an external stylesheet.</p>
+    <!-- Inline Styled Card -->
+    <div style="width: 300px; margin: 20px ; padding: 20px; background-color: darkred; color: white; text-align: center; border-radius: 28px;">
+        <h2>Inline Styled Card</h2>
+        <p>This card is styled using inline CSS.</p>
+    </div>
+
+    <!-- Internal Styled Card -->
+    <div class="internal-card">
+        <h2>Internal Styled Card</h2>
+        <p>This card is styled using internal CSS.</p>
+    </div>
+
+    <!-- External Styled Card -->
+    <div class="external-card">
+        <h2>External Styled Card</h2>
+        <p>This card is styled using an external stylesheet.</p>
+    </div>
 
 </body>
 </html>
