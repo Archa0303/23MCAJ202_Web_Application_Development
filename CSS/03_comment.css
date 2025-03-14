@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 800px;
+    height: 700px;
     background:linear-gradient(to left,#de0442, #460117);
     display: flex;
     justify-content: center;
@@ -9,8 +9,7 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 800px;
+    width: 50%;
     background: white;
     padding: 30px;
     border-radius: 12px;
@@ -34,24 +33,20 @@ input, textarea {
 
 input:focus, textarea:focus {
     border-color: #f10bb4;
-    box-shadow: 0px 0px 8px rgba(228, 9, 221, 0.5);
 
 }
 
-
-input[type="submit"] {
+#submit {
     background: #ca406a;
     color: white;
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    border: none;
-    cursor: pointer;
     border-radius: 8px;
     padding: 12px;
 }
 
-input[type="submit"]:hover {
+#submit:hover {
     background: #5e011b;
     transform: scale(1.05);
 }
