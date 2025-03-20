@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Effect</title>
+    <style>
+        body {
+            background: linear-gradient(to left,#ea3f89,#60022b);
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            font-style: italic;
+            padding: 50px;
+        }
+        #text {
+            font-size: 70px;
+            font-weight: bold;
+            font-style: italic;
+            padding: 10px;
+            border: 2px solid #333;
+            display: inline-block;
+            color:rgb(134, 3, 60);
+            background-color: white;
+        }
+        #text:hover {
+            background-color: #60022b;
+            color: white;
+        }
+        #image {
+            display: none;
+            margin-left: 25%;
+            width: 50%;
+            margin-bottom: 5%;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function showImage() {
+            document.getElementById("text").innerText = "New Text!";
+            document.getElementById("image").style.display = "flex";
+        }
+    </script>
+</head>
+<body>
+    <p id="text" onmouseover="showImage()">Hover over this text</p>
+    <img id="image" src="image.png" alt="New Image">
+</body>
+</html>

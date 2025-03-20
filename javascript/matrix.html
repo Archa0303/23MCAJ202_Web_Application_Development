@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Symmetry Check</title>
+</head>
+<body>
+    <h2>Check Matrix Symmetry</h2>
+    <textarea id="matrixInput" placeholder="Enter matrix row by row"></textarea><br>
+    <button onclick="checkSymmetry()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkSymmetry() {
+            let input = document.getElementById("matrixInput").value;
+            let rows = input.split("\n").map(row => row.split(" ").map(Number));
+            let n = rows.length;
+            
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    if (rows[i][j] !== rows[j][i]) {
+                        document.getElementById("result").innerText = "Not Symmetric";
+                        return;
+                    }
+                }
+            }
+            document.getElementById("result").innerText = "Symmetric";
+        }
+    </script>
+</body>
+</html>

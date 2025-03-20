@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet"  href="styles.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let dob = document.getElementById("dob").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            
+            let phonePattern = /^[0-9]{10}$/;
+            let passwordPattern = /^(?=.*[A-Za-z]).{6,}$/;
+            
+            if (!name) {
+                alert("Enter your name");
+                return;
+            }
+            
+            if (!email) {
+                alert("Enter your email");
+                return;
+            }
+            
+            if (!phone.match(phonePattern)) {
+                alert("Enter a valid 10-digit phone number");
+                return;
+            }
+            
+            if (!dob) {
+                alert("Enter your date of birth");
+                return;
+            }
+            
+            if (!password.match(passwordPattern)) {
+                alert("Password must be at least 6 characters long and contain at least one letter");
+                return;
+            }
+            
+            if (!confirmPassword) {
+                alert("Confirm your password");
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+            
+            alert("Registration Successful");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="validateForm(event)">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your full name"><br>
+        
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email"><br>
+        
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Enter your phone number"><br>
+        
+        <label>Date of Birth</label>
+        <input type="date" id="dob"><br>
+        
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter your password"><br>
+        
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter your password"><br>
+        
+        <input id="submit" type="submit" value="Register">
+    </form>
+    </div>
+</body>
+</html>
