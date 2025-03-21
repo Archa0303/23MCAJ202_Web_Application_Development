@@ -46,7 +46,8 @@
     <script>
         function checkSymmetry() {
             let input = document.getElementById("matrixInput").value;
-            if (!input) return alert("Matrix is required!");
+            if (!input) 
+               return alert("Matrix is required!");
 
             let rows = input.split("\n").map(r => r.split(" ").map(Number));
             let n = rows.length;
