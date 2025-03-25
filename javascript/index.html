@@ -14,29 +14,47 @@
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirmPassword").value;
             
+            // Pattern for name,email,phone number,password
+            let namePattern = /^[A-Za-z\s]+$/;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
             let phonePattern = /^[0-9]{10}$/;
             let passwordPattern = /^(?=.*[A-Za-z]).{6,}$/;
-            
+
+            // Validation for name
             if (!name) {
                 alert("Enter your name");
                 return;
             }
+
+            if (!name.match(namePattern)) {
+                alert("Name should contain only alphabets");
+                return;
+            }
             
+            // Validation for email
             if (!email) {
                 alert("Enter your email");
                 return;
             }
-            
+
+            if (!email.match(emailPattern)) {
+                alert("Enter a valid email address");
+                return;
+            }
+
+            //Phone number validation 
             if (!phone.match(phonePattern)) {
                 alert("Enter a valid 10-digit phone number");
                 return;
             }
             
+            //DOB validation
             if (!dob) {
                 alert("Enter your date of birth");
                 return;
             }
             
+            //Password validation 
             if (!password.match(passwordPattern)) {
                 alert("Password must be at least 6 characters long and contain at least one letter");
                 return;
