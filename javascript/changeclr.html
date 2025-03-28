@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Change Background Color</title>
+    <!-- CSS styling -->
     <style>
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -31,14 +32,17 @@
         }
     </style>
     <script>
+        //To chnage background color
         function changeColor() {
-            let colors = ["red", "blue", "green", "yellow", "pink"];
-            document.body.style.backgroundColor = colors[Math.random() * colors.length | 0];
+            let colors = ["red", "blue", "green", "yellow", "pink"];//Array of colors
+            document.body.style.backgroundColor = colors[Math.random() * colors.length | 0]; 
+            document.getElementById("text").style.color = colors[Math.random() * colors.length | 0];
         }
     </script>
 </head>
 <body>
-    <h2>Click the button to change background color</h2>
-    <button onclick="changeColor()">Change Color</button>
+    <h2 id="text">Click the button to change background color</h2>
+    <!-- Button to cahnge background color -->
+     <button onclick="changeColor()">Change Color</button> 
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Hover Effect</title>
+    <!-- CSS styling -->
     <style>
         body {
             background: linear-gradient(to left, #ea3f89, #60022b);
@@ -22,11 +23,13 @@
         }
     </style>
     <script>
+        //Function to change background image on hover
         function showBackground() {
             document.body.style.background = "url('image.png')";
             document.body.style.backgroundSize = "cover";
             document.getElementById("text").innerText = "Bloom where you are planted.";
         }
+        //Function to revert background when mouse leaves
         function removeBackground() {
             document.body.style.background = "linear-gradient(to left, #ea3f89, #60022b)";
             document.getElementById("text").innerText = "Some flowers never bloom.";
