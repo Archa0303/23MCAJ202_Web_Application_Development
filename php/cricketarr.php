@@ -23,11 +23,11 @@
 <body>
 
 <?php
-// Step 1: Create array of players
+// array of players
 $players = array("Rohit Sharma", "Virat Kohli", "Jasprit Bumrah", "KL Rahul", "Ravindra Jadeja", "Shubman Gill");
 ?>
 
-<!-- Step 2: Display in HTML table -->
+<!--Display in HTML table -->
 <h2 style="text-align:center;">Indian Cricket Team Players</h2>
 
 <table>
