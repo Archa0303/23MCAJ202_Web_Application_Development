@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Entry and Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 95%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Book Details</h2>
+    <form action="insert.php" method="post">
+        Accession Number: <input type="number" name="accession_no" required><br>
+        Title: <input type="text" name="title" required><br>
+        Authors: <input type="text" name="authors" required><br>
+        Edition: <input type="text" name="edition" required><br>
+        Publisher: <input type="text" name="publisher" required><br>
+        <input type="submit" value="Add Book">
+    </form>
+
+    <hr>
+
+    <h2>Search Book by Title</h2>
+    <form action="search.php" method="get">
+        Title: <input type="text" name="search_title" required>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
