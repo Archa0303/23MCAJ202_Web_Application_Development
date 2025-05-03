@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "library");
+$conn = new mysqli("localhost", "root", "archa@2003", "library");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

@@ -28,7 +28,7 @@
 // Connect to database
 $servername = "localhost";
 $username = "root";     
-$password = "";          
+$password = "archa@2003";          
 $dbname = "webdb";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
